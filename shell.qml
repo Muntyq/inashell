@@ -1,10 +1,14 @@
 import Quickshell
-import QtQuick
-import Quickshell.Wayland
-import "modules/bar"
-import "modules/wallpaper"
+import "modules"
+import "theme"
+import "components"
 
 ShellRoot {
-    Bar {}
-    Wallpaper {}
+    Variants {
+        model: Quickshell.screens
+        delegate: Bar {
+            required property var modelData
+            screen: modelData
+        }
+    }
 }
