@@ -1,6 +1,6 @@
 import Quickshell
 import QtQuick
-import qs.theme
+import qs.config
 import qs.components
 
 Label {

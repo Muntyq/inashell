@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Wayland
 import QtQuick
 import QtQuick.Layouts
-import qs.theme
+import qs.config
 import qs.components
 
 PanelWindow {
@@ -28,6 +28,7 @@ PanelWindow {
 
         // InputBar {}
         // MiddleText {}
+        Workspaces {}
         Clock {}
         // BthStatus {}
         // NetStatus {}

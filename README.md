@@ -15,3 +15,6 @@ By pressing a combination of buttons the input bar can change into various modes
 - To do
 
 ## ..
+
+## Extra
+pkill -f "qs -c inashell"

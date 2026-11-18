@@ -1,6 +1,5 @@
 import Quickshell
 import "modules"
-import "theme"
 import "components"
 
 ShellRoot {
