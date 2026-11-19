@@ -1,6 +1,7 @@
 import Quickshell
 import "modules"
 import "components"
+import "config"
 
 ShellRoot {
     Variants {

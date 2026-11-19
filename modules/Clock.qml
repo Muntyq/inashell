@@ -4,6 +4,7 @@ import qs.config
 import qs.components
 
 Label {
+    Plate {}
     SystemClock {
         id: clock
         precision: SystemClock.Minutes
