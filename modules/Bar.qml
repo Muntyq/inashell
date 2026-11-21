@@ -19,19 +19,41 @@ PanelWindow {
     WlrLayershell.namespace: "inash"
 
     RowLayout {
-        anchors {
-            right: parent.right
-            verticalCenter: parent.verticalCenter
-            rightMargin: Theme.gap
-        }
-        spacing: Theme.spacing
 
-        // InputBar {}
-        // MiddleText {}
-        Workspaces {}
-        Clock {}
-        // BthStatus {}
-        // NetStatus {}
-        // SysInfo {}
+        anchors {
+            fill: parent
+            margins: Theme.gap
+        }
+        spacing: Theme.gap
+
+        Box {
+            Layout.preferredWidth: Theme.inputWidth
+            Layout.fillHeight: true
+
+            Label {
+                anchors.centerIn: parent
+                text: "audio"
+                color: Theme.dim
+            }
+        }
+
+        Box {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            Label {
+                anchors.centerIn: parent
+                text: "inash"
+                color: Theme.dim
+            }
+        }
+
+        RowLayout {
+            spacing: Theme.gap
+            Layout.fillHeight: true
+
+            Workspaces { Layout.alignment: Qt.AlignVCenter }
+            Clock      { Layout.alignment: Qt.AlignVCenter }
+        }
     }
 }

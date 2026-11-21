@@ -5,7 +5,7 @@ import qs.config
 Rectangle {
     id: root
 
-    color: Theme.surface
+    color: Theme.box
     border.color: Theme.border
     border.width: Theme.borderWidth
     radius: Theme.radius

@@ -7,7 +7,7 @@ Singleton {
 
     // Colors
     readonly property color bg: "#1d2021"
-    readonly property color surface: "#282828"
+    readonly property color box: "#282828"
     readonly property color fg: "#ebdbb2"
     readonly property color dim: "#928374"
     readonly property color accent: "#fabd2f"
