@@ -4,6 +4,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.config
 import qs.components
+import qs.services
 
 PanelWindow {
     id: bar
@@ -30,22 +31,14 @@ PanelWindow {
             Layout.preferredWidth: Theme.inputWidth
             Layout.fillHeight: true
 
-            Label {
-                anchors.centerIn: parent
-                text: "audio"
-                color: Theme.dim
-            }
+            AudioControls {}
         }
 
         Box {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            Label {
-                anchors.centerIn: parent
-                text: "inash"
-                color: Theme.dim
-            }
+            MiddleText {}
         }
 
         RowLayout {
