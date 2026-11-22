@@ -50,6 +50,7 @@ PanelWindow {
             Layout.fillHeight: true
 
             StatsIndicator { Layout.alignment: Qt.AlignVCenter }
+            WifiIndicator  { Layout.alignment: Qt.AlignVCenter }
             Workspaces     { Layout.alignment: Qt.AlignVCenter }
             Clock          { Layout.alignment: Qt.AlignVCenter }
         }

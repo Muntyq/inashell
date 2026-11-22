@@ -15,13 +15,13 @@ Box {
 
         Label { text: " [ " }
         Label {
-            text: "cpu " + String(Math.round(SystemStats.cpu)).padStart(2, "0") + "%"
+            text: "CPU " + String(Math.round(SystemStats.cpu)).padStart(2, "0") + "%"
             color: SystemStats.cpu >= 90 ? Theme.accent : Theme.fg
         }
         Label { text: " | " }
 
         Label {
-            text: "mem " + String(Math.round(SystemStats.memory)).padStart(2, "0") + "%"
+            text: "MEM " + String(Math.round(SystemStats.memory)).padStart(2, "0") + "%"
             color: SystemStats.memory >= 90 ? Theme.accent : Theme.fg
         }
         Label { text: " ] " }
