@@ -8,8 +8,21 @@ By default on the input bar there will be buttons for audio control and in the m
 By pressing a combination of buttons the input bar can change into various modes like super+l for launch mode, where it will basically act as wofi or super+/ for command mode where you can input a custom comand that will be pre-coded, for example "system" to open a terminal with btop, or "suspend" to suspend pc etc.. The middletext should change to tell what mode youre in. it should return to the default after doing whatever.
 
 
+## Structure:
+- `shell.qml` - root shell, layers and IPC
+- `config/` - shared config and theme
+- `components/` - reusable QML components
+- `modules/bar/left/` - input bar, audio controls and mode inputs
+- `modules/bar/center/` - middle status text
+- `modules/bar/right/` - stats, network, bluetooth, workspaces and clock
+- `modules/wallpaper/` - wallpaper background layer
+- `services/audio/` - audio and media state
+- `services/input/` - mode and command state
+- `services/system/` - stats, network and bluetooth state
+- `services/theme/` - wallpaper state and auto-theming
+
 ## Wallpaper changer:
-- To do
+- Cycle with SUPER+W; choice saved to `~/.cache/inash-wallpaper`
 
 ## Notifications:
 - To do

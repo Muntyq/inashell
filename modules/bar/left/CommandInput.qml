@@ -1,6 +1,6 @@
 import QtQuick
 import Quickshell
-import qs.services
+import qs.services.input
 
 Item {
     id: root

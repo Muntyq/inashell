@@ -19,14 +19,14 @@ Singleton {
     readonly property int batteryPercent: root.connected && root.activeDevice.batteryAvailable ? Math.round(root.activeDevice.battery * 100) : 0
     readonly property string label: {
         if (!root.adapter)
-            return "bt no hw";
+            return "BT no hw";
         if (!root.enabled)
-            return "bt off";
+            return "BT OFF";
         if (!root.connected)
-            return "bt on";
+            return "BT ON";
         const name = root.deviceName.length > 12 ? root.deviceName.slice(0, 11) + "…" : root.deviceName;
         if (!root.activeDevice.batteryAvailable)
-            return "bt " + name;
-        return "bt " + name + " " + String(root.batteryPercent).padStart(2, "0") + "%";
+            return "BT " + name;
+        return "BT " + name + " " + String(root.batteryPercent).padStart(2, "0") + "%";
     }
 }

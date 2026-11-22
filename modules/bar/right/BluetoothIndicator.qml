@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.components
 import qs.config
-import qs.services
+import qs.services.system
 
 Box {
     Layout.alignment: Qt.AlignVCenter
@@ -11,7 +11,7 @@ Box {
     Label {
         id: label
         anchors.centerIn: parent
-        text: BluetoothStatus.label
+        text: " [ " + BluetoothStatus.label + " ] "
         color: BluetoothStatus.connected ? Theme.fg : Theme.dim
     }
 }

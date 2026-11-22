@@ -1,7 +1,8 @@
 import QtQuick
 import qs.components
 import qs.config
-import qs.services
+import qs.services.audio
+import qs.services.input
 
 Label {
     id: root

@@ -4,7 +4,10 @@ import QtQuick
 import QtQuick.Layouts
 import qs.config
 import qs.components
-import qs.services
+import qs.modules.bar.left
+import qs.modules.bar.center
+import qs.modules.bar.right
+import qs.services.input
 
 PanelWindow {
     id: bar

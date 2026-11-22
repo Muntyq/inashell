@@ -1,8 +1,10 @@
 import Quickshell
 import Quickshell.Io
 import QtQml
-import "modules"
-import qs.services
+import qs.modules
+import qs.modules.wallpaper
+import qs.services.input
+import qs.services.theme
 
 ShellRoot {
     QtObject {
