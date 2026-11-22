@@ -5,6 +5,8 @@ import qs.services
 
 Row {
     id: root
+    width: implicitWidth
+    height: implicitHeight
     anchors.centerIn: parent
     spacing: Theme.spacing
 

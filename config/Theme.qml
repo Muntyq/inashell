@@ -22,5 +22,5 @@ Singleton {
     readonly property string font: "monospace"
     readonly property int radius: 0
     readonly property int borderWidth: 2
-    readonly property int inputWidth: 300
+    readonly property int inputWidth: 500
 }

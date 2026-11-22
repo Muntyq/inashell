@@ -19,6 +19,11 @@ PanelWindow {
 
     WlrLayershell.namespace: "inash"
 
+    readonly property string barMode: (screen && Mode.screenName === screen.name) ? Mode.mode : "default"
+    readonly property bool inputActive: barMode !== "default"
+
+    WlrLayershell.keyboardFocus: inputActive ? WlrKeyboardFocus.Exclusive : WlrKeyboardFocus.None
+
     RowLayout {
 
         anchors {
@@ -27,18 +32,17 @@ PanelWindow {
         }
         spacing: Theme.gap
 
-        Box {
+        InputBar {
             Layout.preferredWidth: Theme.inputWidth
             Layout.fillHeight: true
-
-            AudioControls {}
+            mode: bar.barMode
         }
 
         Box {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            MiddleText {}
+            MiddleText { mode: bar.barMode }
         }
 
         RowLayout {
@@ -47,6 +51,22 @@ PanelWindow {
 
             Workspaces { Layout.alignment: Qt.AlignVCenter }
             Clock      { Layout.alignment: Qt.AlignVCenter }
+        }
+    }
+
+    PopupWindow {
+        id: popup
+        anchor.window: bar
+        anchor.rect.x: Theme.gap
+        anchor.rect.y: bar.height
+        implicitWidth: list.implicitWidth
+        implicitHeight: list.implicitHeight
+        color: "transparent"
+        visible: bar.inputActive && Mode.items.length > 0
+
+        ResultsList {
+            id: list
+            anchors.fill: parent
         }
     }
 }
