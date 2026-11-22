@@ -61,7 +61,7 @@ Item {
 
     PromptField {
         anchors.fill: parent
-        prefix: "run"
+        prefix: "run "
         onTextChanged: root.query = text
         onMoved: delta => Mode.move(delta)
         onAccepted: root.accept()

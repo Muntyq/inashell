@@ -9,7 +9,11 @@ Box {
     property string mode: "default"
 
     AudioControls {
-        anchors.centerIn: parent
+        anchors {
+            fill: parent
+            leftMargin: Theme.spacing
+            rightMargin: Theme.spacing
+        }
         visible: root.mode === "default"
     }
 

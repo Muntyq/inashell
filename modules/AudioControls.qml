@@ -1,55 +1,68 @@
 import QtQuick
+import QtQuick.Layouts
 import qs.components
 import qs.config
 import qs.services
 
-Row {
+RowLayout {
     id: root
-    width: implicitWidth
-    height: implicitHeight
-    anchors.centerIn: parent
+    anchors.fill: parent
     spacing: Theme.spacing
 
     TextButton {
-        text: "-"
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
+        text: "[-]"
         dim: Audio.audio === null
         onClicked: Audio.change(-0.05)
     }
 
     TextButton {
-        text: Audio.muted ? "muted" : Audio.percent + "%"
-        active: Audio.muted
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
+        text: Audio.muted ? "MUTE" : Audio.percent === 100 ? "MAX%" : Audio.percent + " %"
+        active: Audio.muted || Audio.percent === 100
         dim: Audio.audio === null
         onClicked: Audio.toggleMute()
         onScrolled: direction => Audio.change(direction * 0.05)
     }
 
     TextButton {
-        text: "+"
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
+        text: "[+]"
         dim: Audio.audio === null
         onClicked: Audio.change(0.05)
     }
 
     Label {
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
         text: "|"
         color: Theme.dim
     }
 
     TextButton {
-        text: "|<"
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
+        text: "[ PREV ]"
         dim: Media.player === null
         onClicked: Media.previous()
     }
 
     TextButton {
-        text: Media.playing ? "||" : ">"
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
+        text: Media.playing ? "[ STOP ]" : "[ PLAY ]"
         active: Media.playing
         dim: Media.player === null
         onClicked: Media.toggle()
     }
 
     TextButton {
-        text: ">|"
+        Layout.fillWidth: true
+        horizontalAlignment: Text.AlignHCenter
+        text: "[ NEXT ]"
         dim: Media.player === null
         onClicked: Media.next()
     }

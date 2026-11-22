@@ -17,7 +17,7 @@ Singleton {
     readonly property int barHeight: 32
     readonly property int rowHeight: 24
     readonly property int gap: 4
-    readonly property int spacing: 8
+    readonly property int spacing: 2
     readonly property int fontSize: 13
     readonly property string font: "monospace"
     readonly property int radius: 0

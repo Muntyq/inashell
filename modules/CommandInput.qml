@@ -64,7 +64,7 @@ Item {
 
     onQueryChanged: {
         pending = "";
-        Mode.message = "";
+        Mode.clearMessage();
     }
     onResultsChanged: publish()
     Component.onCompleted: publish()

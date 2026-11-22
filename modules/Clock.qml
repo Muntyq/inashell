@@ -15,6 +15,6 @@ Box {
             precision: SystemClock.Minutes
         }
 
-        text: "[ " + Qt.formatDateTime(clock.date, "ddd dd MMM HH:mm") + " ]"
+        text: " [ " + Qt.formatDateTime(clock.date, "ddd dd MMM HH:mm") + " ] "
     }
 }

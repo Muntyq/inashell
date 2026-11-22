@@ -21,7 +21,7 @@ Box {
             return false;
         }
 
-        Label { text: "[" }
+        Label { text: " [" }
 
         Repeater {
             model: Config.workspacesNumber
@@ -38,6 +38,6 @@ Box {
             }
         }
 
-        Label { text: "]" }
+        Label { text: "] " }
     }
 }
