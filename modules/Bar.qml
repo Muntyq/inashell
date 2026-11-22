@@ -49,8 +49,9 @@ PanelWindow {
             spacing: Theme.gap
             Layout.fillHeight: true
 
-            Workspaces { Layout.alignment: Qt.AlignVCenter }
-            Clock      { Layout.alignment: Qt.AlignVCenter }
+            StatsIndicator { Layout.alignment: Qt.AlignVCenter }
+            Workspaces     { Layout.alignment: Qt.AlignVCenter }
+            Clock          { Layout.alignment: Qt.AlignVCenter }
         }
     }
 

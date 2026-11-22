@@ -39,7 +39,6 @@ RowLayout {
         Layout.fillWidth: true
         horizontalAlignment: Text.AlignHCenter
         text: "|"
-        color: Theme.dim
     }
 
     TextButton {
