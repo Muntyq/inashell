@@ -6,12 +6,12 @@ Singleton {
     id: root
 
     // Colors
-    readonly property color bg: "#1d2021"
-    readonly property color box: "#282828"
-    readonly property color fg: "#ebdbb2"
-    readonly property color dim: "#928374"
-    readonly property color accent: "#fabd2f"
-    readonly property color border: "#665c54"
+    property color bg: "#1d2021"
+    property color box: "#282828"
+    property color fg: "#ebdbb2"
+    property color dim: "#928374"
+    property color accent: "#fabd2f"
+    property color border: "#665c54"
 
     // Metrics
     readonly property int barHeight: 32
